@@ -32,7 +32,7 @@ system("cls");
     }
 
 }
-void G(P p[], int n)
+void Gchart(P p[], int n)
 {
     int i, j;
     printf(" ");
@@ -153,7 +153,7 @@ int main()
             }
       }
        table(function, n);
-       G(function, n);
+       Gchart(function, n);
       return 0;
 }
 
