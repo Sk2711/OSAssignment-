@@ -10,19 +10,19 @@ struct gift
 };
 void setpriority(gift a[], int low, int h)
 {
-    int pivot, i, j; gift t;
+    int pi, i, j; gift t;
     if (low < h)
     {
-        pivot = low;
+        pi = low;
         i = low;
         j = h;
         while (i < j) 
         {
-            while (a[i].noofgift <= a[pivot].noofgift && i <= h)
+            while (a[i].noofgift <= a[pi].noofgift && i <= h)
             {
                 i++;
             }
-            while (a[j].noofgift > a[pivot].noofgift && j >= low)
+            while (a[j].noofgift > a[pi].noofgift && j >= low)
             {
                 j--;
             }
@@ -34,8 +34,8 @@ void setpriority(gift a[], int low, int h)
             }
         }
         t = a[j];
-        a[j] = a[pivot];
-        a[pivot]= t;
+        a[j] = a[pi];
+        a[pi]= t;
         setpriority(a, low, j - 1);
         setpriority(a, j + 1, h);
     }
